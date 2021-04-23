@@ -1,0 +1,14 @@
+@mixin clear-fix {
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+   
+}
+
+@mixin center-div {
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

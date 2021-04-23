@@ -1,0 +1,99 @@
+.btn{
+    font-size: 1.6rem;
+       
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 45px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        cursor: pointer;
+
+        // Only for button element
+        border: none;
+       
+    }
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0px 10px 20px rgba(0, 0,0,.2);
+        /* START: Button hover scalling animation */
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+       
+    }
+    &:active, &:focus{
+        transform: translateY(-1px);
+        box-shadow: 0px 5px 10px rgba(0, 0,0,.2);
+        // Only for button element
+         outline: none;
+    }
+
+    &-white{
+        background-color: $text-white;
+        color: $text-primary;
+        /* START: Button hover scalling animation */
+        &::after{
+            background-color:#fff;
+        }
+    }
+    &-primary{
+        background-color: $color-primary;
+        color: $text-white;
+        /* START: Button hover scalling animation */
+        &::after{
+            background-color: $color-primary;
+        }
+    }
+
+    /* START: Button hover scalling animation */
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left:0px;
+        z-index: -1;
+        border-radius: 100px;
+        transition: all .4s;
+    }
+    /* START: Button move up animation */
+    &-animated{
+        animation-name: btnMoveup;
+        animation-delay: .75s;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: 1.6rem;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 5px;
+        border-radius: 2px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: #fff;
+        box-shadow: 0 1rem 2rem rgba(0, 0,0,.15);
+        transform: translateY(-3px);
+    }
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba(0, 0,0,.15);
+        transform: translateY(-1px);
+    }
+}
