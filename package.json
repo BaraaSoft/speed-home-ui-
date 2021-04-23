@@ -1,0 +1,19 @@
+{
+  "name": "speedhome-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "build": "node-sass --watch sass/style.scss -o css/ -r",
+    "start": "live-server",
+    "dev": "npx npm-run-all --parallel build start"
+  },
+  "author": "Baaraa",
+  "license": "ISC"
+}
