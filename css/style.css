@@ -100,9 +100,13 @@ body {
   .paragraph:not(.paragraph:last-child) {
     margin-bottom: 3rem; }
 
-.text-xl {
-  font-size: 1.5rem;
-  font-weight: 700; }
+.text-xl, .sview-message-header h3, .sview-message-filter h3 {
+  font-size: 1.4rem;
+  font-weight: 600; }
+
+.text-lg, .sview-message-filter .text-group {
+  font-size: 1.2rem;
+  font-weight: 600; }
 
 .center-text {
   text-align: center; }
@@ -279,6 +283,7 @@ body {
   .menu-nav {
     width: 6.6rem;
     background-color: #fff;
+    z-index: 3;
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
@@ -312,7 +317,10 @@ body {
     flex: 1;
     overflow: auto;
     height: 100vh;
-    z-index: 1; }
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch; }
 
 .logo {
   background-color: #fe91a2;
@@ -332,6 +340,7 @@ body {
 .navbar {
   width: 100%;
   height: 56px;
+  z-index: 3;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -379,6 +388,56 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
+
+.sview {
+  background-color: #f7f7f7;
+  z-index: 1;
+  flex: 1;
+  overflow: hidden;
+  padding-top: 1.8rem;
+  padding-left: 1.8rem;
+  display: flex;
+  justify-content: stretch; }
+  .sview-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px; }
+    .sview-message-header h3 {
+      padding-left: 5px; }
+    .sview-message-header input {
+      width: 100%;
+      max-width: 340px;
+      margin-top: 6px;
+      border: none;
+      padding: 1.0rem 2rem;
+      border-radius: .2rem; }
+    .sview-message-filter {
+      display: flex;
+      justify-content: space-between; }
+      .sview-message-filter h3 {
+        padding-left: 5px; }
+      .sview-message-filter .text-group {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .sview-message-filter .text-group > i {
+          padding: 5px; }
+    .sview-message-list {
+      flex: 1;
+      overflow-y: scroll;
+      background-color: red; }
+  .sview-chat {
+    flex: 3; }
+  .sview-divider {
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    height: 2px;
+    width: 100%;
+    background-color: #e4e4e4;
+    width: 100%;
+    max-width: 340px; }
 
 .section-about {
   background-color: #f7f7f7;

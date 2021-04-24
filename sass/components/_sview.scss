@@ -1,0 +1,78 @@
+.sview{
+    background-color:$color-background-dark;
+    z-index: 1;
+    flex: 1;
+    overflow: hidden;
+    padding-top: 1.8rem;
+    padding-left: 1.8rem;
+    // child view
+    display: flex;
+    justify-content: stretch;
+    &-message{
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+       padding: 12px;
+    //   background-color: red;
+       &-header{
+           & h3{
+               @extend .text-xl;
+               padding-left: 5px;
+           }
+           & input{
+               width: 100%;
+               max-width: 340px;
+               margin-top: 6px;
+               border: none;
+               padding: 1.0rem 2rem;
+               border-radius: .2rem;
+           }
+       }
+
+       &-filter{
+           display: flex;
+           justify-content: space-between;
+           & h3{
+               @extend .text-xl;
+               padding-left: 5px;
+           }
+           .text-group{
+               cursor: pointer;
+               @extend .text-lg;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               & > i {
+                    padding: 5px;
+               }
+              
+            
+           }
+       }
+
+       &-list{
+           flex: 1;
+           overflow-y: scroll;
+           background-color: red;
+        &-item{
+
+        }
+       }
+    }
+
+
+    &-chat{
+        flex: 3;
+        
+    }
+
+    &-divider{
+        margin-top: 1.8rem;
+        margin-bottom: 1.8rem;
+        height: 2px;
+        width: 100%;
+        background-color: $color-diviver;
+        width: 100%;
+        max-width: 340px;
+    }
+}

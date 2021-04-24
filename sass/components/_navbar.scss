@@ -2,6 +2,7 @@
     @extend .elevate-menu;
     width: 100%;
     height: 56px;
+    z-index: 3;
     display: flex;
     flex-direction: row;
     align-items: center;

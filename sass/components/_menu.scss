@@ -6,7 +6,7 @@
         @extend .elevate-menu;
         width: 6.6rem;
         background-color:$color-bakground-light;
-
+        z-index: 3;
         height: 100vh;
         position: -webkit-sticky;
         position: sticky;
@@ -61,7 +61,10 @@
         height: 100vh;
         // content elevations
         z-index: 1;
-        // box-shadow: -0.5rem 0rem 1.05rem #19191973;
+        // child view
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
     }
 }
 
