@@ -107,7 +107,7 @@ body {
   font-size: 1.4rem;
   font-weight: 600; }
 
-.text-lg, .sview-message-filter .text-group, .sview-message-list-item .item-title {
+.text-lg, .sview-message-filter .text-group, .sview-message-list-item .item-title, .chatview-footer input {
   font-size: 1.2rem;
   font-weight: 600; }
 
@@ -505,6 +505,7 @@ body {
         .sview-message-list-item .item-time {
           color: #b6b6b6; }
   .sview-chat {
+    position: relative;
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -525,7 +526,8 @@ body {
   margin-left: 2rem;
   background-color: #fff;
   border-radius: 4px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
   .chatview-header {
     position: absolute;
     width: 100%;
@@ -538,6 +540,42 @@ body {
     border-bottom: 2px solid rgba(228, 228, 228, 0.32); }
     .chatview-header-title {
       margin-left: 1rem; }
+  .chatview-footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    border-top: 3px solid rgba(228, 228, 228, 0.32);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    align-items: center;
+    transition: all .5s; }
+    .chatview-footer input {
+      border: none;
+      flex: 1;
+      padding: .8rem; }
+      .chatview-footer input:focus {
+        outline: none; }
+    .chatview-footer i {
+      transition: all .5s;
+      cursor: pointer;
+      font-size: 20px;
+      margin-right: 1.5rem;
+      color: rgba(153, 153, 153, 0.52); }
+      .chatview-footer i:hover {
+        color: #ffc600; }
+    .chatview-footer :first-child:hover {
+      transition: all .5s;
+      color: black; }
+    .chatview-footer :last-child {
+      cursor: pointer;
+      color: #fe91a2;
+      font-size: 20px; }
+  .chatview:last-child {
+    padding-bottom: 4rem; }
   .chatview-chat {
     display: flex;
     width: 100%;
