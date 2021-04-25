@@ -50,7 +50,7 @@ body{
     // Inline-block prevent the element from occupying 100% of the width.
     display: inline-block;
     // making the text color to be gradient
-    background: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    //background: linear-gradient(to right,$color-primary-light,$color-primary-dark);
     -webkit-background-clip: text;
     color:transparent;
     
@@ -83,6 +83,11 @@ body{
 .text-lg{
      font-size: 1.2rem;
     font-weight: 600;
+}
+
+.text-md{
+     font-size: 1.1rem;
+     font-weight: 500;
 }
 
 
