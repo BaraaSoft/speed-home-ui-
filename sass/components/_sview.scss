@@ -68,7 +68,10 @@
                     color: $text-white;
                }
             }
+
+           
            &-item{
+               cursor: pointer;
                position: relative;
                padding: 1rem;
                background-color: $text-white;
@@ -76,6 +79,10 @@
                border-radius: 2px;
                margin-top: 3px;
                display: flex;
+
+                &:hover:not(.active){
+                    background-color: $color-primary-light;
+                }
 
                .item-status{
                    font-size: 8px;
@@ -129,7 +136,10 @@
 
     &-chat{
         flex: 4;
-        
+        // for child view 
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;  
     }
 
     &-divider{

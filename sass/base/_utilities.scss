@@ -35,6 +35,17 @@
   /* Yep, even the new clip-path has deprecated stuff. */
 }
 
+.img-circle{
+
+    @extend .elevate-1;
+    border-radius: 50%; 
+    height: 34px;
+    width: 34px;
+    overflow: hidden;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
 
 .elevate-menu{
      box-shadow: 0.1rem 0 1rem #19191929;
@@ -68,5 +79,19 @@
     -webkit-box-shadow:0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+.space-8{
+    height: 8rem;
+}
+
+.space-6{
+ height: 6rem;
+}
+
+.space-4{
+ height: 6rem;
 }
 

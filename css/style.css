@@ -99,6 +99,10 @@ body {
   .paragraph:not(.paragraph:last-child) {
     margin-bottom: 3rem; }
 
+.text-xxl, .chatview-header-title {
+  font-size: 1.7rem;
+  font-weight: 700; }
+
 .text-xl, .sview-message-header h3, .sview-message-filter h3 {
   font-size: 1.4rem;
   font-weight: 600; }
@@ -109,6 +113,10 @@ body {
 
 .text-md, .sview-message-list-item .item-time {
   font-size: 1.1rem;
+  font-weight: 500; }
+
+.text-message, .chatview-chat .content-text {
+  font-size: 1.3rem;
   font-weight: 500; }
 
 .center-text {
@@ -140,15 +148,23 @@ body {
   /* OLD VALUE example: circle(245px, 140px, 50px); */
   /* Yep, even the new clip-path has deprecated stuff. */ }
 
+.img-circle {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .elevate-menu, .menu-nav, .navbar {
   box-shadow: 0.1rem 0 1rem #19191929; }
 
-.elevate-1, .navbar-item-img, .sview-message-list-item .item-img {
+.elevate-1, .img-circle, .navbar-item-img, .sview-message-list-item .item-img, .chatview-chat .content-text {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-.elevate-2 {
+.elevate-2, .chatview-header img {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
@@ -167,6 +183,15 @@ body {
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
+.space-8 {
+  height: 8rem; }
+
+.space-6 {
+  height: 6rem; }
+
+.space-4 {
+  height: 6rem; }
 
 * {
   margin: 0;
@@ -443,6 +468,7 @@ body {
         .sview-message-list .active p, .sview-message-list .active h3 {
           color: #fff; }
       .sview-message-list-item {
+        cursor: pointer;
         position: relative;
         padding: 1rem;
         background-color: #fff;
@@ -450,6 +476,8 @@ body {
         border-radius: 2px;
         margin-top: 3px;
         display: flex; }
+        .sview-message-list-item:hover:not(.active) {
+          background-color: rgba(254, 145, 162, 0.24); }
         .sview-message-list-item .item-status {
           font-size: 8px;
           position: absolute;
@@ -477,7 +505,10 @@ body {
         .sview-message-list-item .item-time {
           color: #b6b6b6; }
   .sview-chat {
-    flex: 4; }
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; }
   .sview-divider {
     margin-top: 1.8rem;
     margin-bottom: 1.8rem;
@@ -486,3 +517,52 @@ body {
     background-color: #e4e4e4;
     width: 100%;
     max-width: 340px; }
+
+.chatview {
+  flex: 1;
+  z-index: 1;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow-y: scroll; }
+  .chatview-header {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 8rem;
+    border-bottom: 2px solid rgba(228, 228, 228, 0.32); }
+    .chatview-header-title {
+      margin-left: 1rem; }
+  .chatview-chat {
+    display: flex;
+    width: 100%;
+    min-height: 2rem;
+    padding: 2rem; }
+    .chatview-chat img {
+      margin-left: 1rem;
+      margin-right: 1rem; }
+    .chatview-chat .content-text {
+      overflow: hidden;
+      border-radius: 8px;
+      max-width: 50rem;
+      padding: 1rem; }
+    .chatview-chat .content-time {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      .chatview-chat .content-time i {
+        color: #28b485;
+        margin: 0px 6px; }
+      .chatview-chat .content-time p {
+        color: #b6b6b6; }
+  .chatview .send {
+    flex-direction: row; }
+  .chatview .receive {
+    flex-direction: row-reverse; }
+    .chatview .receive .content-text {
+      background-color: rgba(89, 88, 175, 0.11); }

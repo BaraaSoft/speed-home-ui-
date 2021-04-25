@@ -1,0 +1,82 @@
+.chatview{
+    flex: 1;
+    z-index: 1;
+    margin-top: 2rem;
+    margin-left:2rem;
+    background-color: $text-white;
+    border-radius: 4px;
+    overflow-y: scroll;
+    
+
+    &-header{
+        position: absolute;
+        width: 100%;
+        background-color: $text-white;
+
+
+        padding-left: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 8rem;
+        border-bottom:2px solid rgba(228, 228, 228, 0.32);
+        & img{
+            @extend .elevate-2;
+        }
+        &-title{
+            @extend .text-xxl;
+             margin-left: 1rem;
+        }
+    }
+
+    
+
+    &-chat{
+        display: flex;
+        width: 100%;
+        min-height: 2rem;
+        padding: 2rem; 
+        
+        // background-color: red;
+        & img {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        &-body{
+     
+        }
+
+        .content-text{
+            @extend .elevate-1;
+            @extend .text-message;
+            overflow: hidden;
+            border-radius: 8px;
+            max-width: 50rem;
+            padding: 1rem;
+        }
+
+        .content-time{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            & i{
+                color: $color-success;
+                margin: 0px 6px;
+            }
+            & p {
+                color: $text-grey-light;
+            }
+        }
+
+    }
+
+    .send{
+        flex-direction: row;
+    }
+    .receive{
+        flex-direction: row-reverse;
+        & .content-text {
+            background-color:rgba(89, 88, 175, 0.11)
+        }
+    }
+}
