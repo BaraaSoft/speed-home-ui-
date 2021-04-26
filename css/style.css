@@ -576,12 +576,13 @@ body {
       color: #fe91a2;
       font-size: 20px; }
   .chatview:last-child {
-    padding-bottom: 4rem; }
+    padding-bottom: 6rem; }
   .chatview-chat {
     display: flex;
     width: 100%;
     min-height: 2rem;
-    padding: 2rem; }
+    padding-top: 4rem;
+    margin-top: -3rem; }
     .chatview-chat img {
       margin-left: 1rem;
       margin-right: 1rem; }
