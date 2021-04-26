@@ -33,7 +33,7 @@
 
     &-footer{
          position: absolute;
-         z-index: 2;
+         z-index: 3;
          bottom: 0px;
          width: 100%;
          height: 4rem;
@@ -46,6 +46,7 @@
          align-items: center;
          transition: all .5s;
          & input{
+             z-index: 4;
              border: none;
              flex: 1;
              padding: .8rem;
@@ -67,7 +68,7 @@
 
          & :first-child:hover{
               transition: all .5s;
-            color: black;
+              color: black;
          }
 
          & :last-child{
@@ -82,10 +83,6 @@
     &:last-child{
         padding-bottom: 4rem;
     }
-    
-    // &-chat < .chat-continue {
-    //     margin-top: -10rem;
-    // }
 
     &-chat{
         display: flex;
@@ -146,7 +143,7 @@
                 }
                 & i {
                      position: absolute;
-                     z-index: 3;
+                     z-index: 1;
                      top:30%;
                      left: 40%;
                      cursor: pointer;
