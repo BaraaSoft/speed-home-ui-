@@ -584,6 +584,48 @@ body {
     .chatview-chat img {
       margin-left: 1rem;
       margin-right: 1rem; }
+    .chatview-chat-body .attachment {
+      cursor: pointer;
+      min-width: 16rem;
+      display: flex;
+      align-items: center; }
+    .chatview-chat-body .attachment i {
+      font-size: 18px;
+      padding-right: 5px;
+      color: #fe91a2; }
+    .chatview-chat-body .attachment p {
+      font-weight: bold; }
+    .chatview-chat-body .media-sound {
+      display: flex;
+      align-items: center; }
+      .chatview-chat-body .media-sound .progress-bar {
+        height: .6rem;
+        width: 14rem;
+        background-color: #fe91a2;
+        border-radius: 20px;
+        margin: 5px;
+        margin-left: -5px; }
+      .chatview-chat-body .media-sound i {
+        cursor: pointer;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        font-size: 18px;
+        color: #fe91a2; }
+    .chatview-chat-body .media-video {
+      position: relative; }
+      .chatview-chat-body .media-video img {
+        height: 100px;
+        width: auto;
+        border-radius: 2px;
+        filter: brightness(90%); }
+      .chatview-chat-body .media-video i {
+        position: absolute;
+        z-index: 3;
+        top: 30%;
+        left: 40%;
+        cursor: pointer;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        font-size: 40px;
+        color: #fe91a2; }
     .chatview-chat .content-text {
       overflow: hidden;
       border-radius: 8px;
@@ -598,9 +640,15 @@ body {
         margin: 0px 6px; }
       .chatview-chat .content-time p {
         color: #b6b6b6; }
-  .chatview .send {
-    flex-direction: row; }
   .chatview .receive {
+    flex-direction: row; }
+  .chatview .send {
     flex-direction: row-reverse; }
-    .chatview .receive .content-text {
+    .chatview .send .content-text {
       background-color: rgba(89, 88, 175, 0.11); }
+  .chatview .chat-continue {
+    margin-right: 5rem; }
+  .chatview .no-img {
+    margin-top: -3rem; }
+    .chatview .no-img div {
+      margin-right: 2.5rem; }
